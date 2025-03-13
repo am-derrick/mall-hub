@@ -21,19 +21,19 @@ class LaundryItemInline(admin.TabularInline):
 class ServiceCategoryAdmin(admin.ModelAdmin):
     list_display = ('name', 'is_active')
     search_fields = ('name', 'description')
-    inlines = [SalonService, MassageService, LaundryServiceInline]
+    inlines = [SalonServiceInline, MassageServiceInline, LaundryServiceInline]
 
 @admin.register(SalonService)
 class SalonServiceAdmin(admin.ModelAdmin):
     list_display = ('name', 'price', 'duration_minutes', 'is_active')
     search_fields = ('name', 'description')
-    list_filter = ('is_active')
+    list_filter = ('is_active',)
 
 @admin.register(MassageService)
 class MassageServiceAdmin(admin.ModelAdmin):
     list_display = ('name', 'price', 'duration_minutes', 'is_active')
     search_fields = ('name', 'description')
-    list_filter = ('is_active')
+    list_filter = ('is_active',)
 
 @admin.register(LaundryService)
 class LaundryServiceAdmin(admin.ModelAdmin):

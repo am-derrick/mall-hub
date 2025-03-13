@@ -67,7 +67,7 @@ REST_FRAMEWORK = {
 }
 
 # Custom user model
-AUTH_USER_MODEL = 'users.User'
+# AUTH_USER_MODEL = 'users.User'
 
 ROOT_URLCONF = 'yom_project.urls'
 
